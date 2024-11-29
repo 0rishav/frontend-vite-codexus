@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.question-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 10px; 
+    padding: 20px;
+}
+
+.grid-question {
+    background: #ffffff;
+    padding: 20px; 
+    border: 1px solid #ddd;
+    border-radius: 5px; 
+}
+
+.tabs{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.tab{
+    background-color: gray;
+    color: #ffffff;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.category,
+.question,
+.answers,
+.statistics {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 1rem 0rem;
+}
+
+.visible {
+    display: block;
+}
+
+.tab.active {
+    background-color: rgb(243, 37, 37);
+    color: #ffffff; 
+}
+
+#categorySection h1{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group-cat{
+    height: 100%;
+    width: 100%;
+}
+
+.form-group-cat label{
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+.form-group-cat input {
+    height: 40px;
+    width: 60%; 
+    border: 2px solid #ddd; 
+    border-radius: 5px; 
+    padding: 10px;
+    font-size: 16px; 
+    color: #333; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group-cat input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); 
+    outline: none;
+}
+
+.form-group-cat input::placeholder {
+    color: #aaa; 
+    opacity: 1;
+    transition: color 0.3s ease;
+}
+
+.form-group-cat input:focus::placeholder {
+    color: transparent; 
+}
+
+.form-group-cat button {
+    padding: 10px 40px;
+    background: linear-gradient(90deg, #4a90e2, #007aff);
+    color: white;
+    border: none;
+    border-radius: 5px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease; 
+}
+
+.form-group-cat button:hover {
+    background: linear-gradient(90deg, #007aff, #4a90e2);
+    transform: scale(1.05); 
+}
+
+.form-group-cat button:focus {
+    outline: none; 
+}
+
+
+/* question  */
+
+.question h1{
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#questionSection {
+    padding: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-question-form {
+    max-width: 600px; 
+}
+
+.create-question-form select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.create-question-form .form-group {
+    margin-bottom: 20px; 
+}
+
+.create-question-form label {
+    display: block;
+    margin-bottom: 5px; 
+    font-weight: bold; 
+}
+
+.create-question-form input, 
+.create-question-form textarea {
+    width: 100%; 
+    height: 40px;
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease; 
+    font-size: 16px; 
+}
+
+.create-question-form textarea{
+    height: 100px;
+}
+
+.create-question-form input:focus, 
+.create-question-form textarea:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); 
+}
+
+.create-question-form button {
+    height: 40px;
+    width: 100%; 
+    background: linear-gradient(90deg, #4a90e2, #007aff);
+    color: white;
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease; 
+}
+
+.create-question-form button:hover {
+    background: linear-gradient(90deg, #007aff, #4a90e2); 
+    transform: scale(1.05);
+}
+
+/* Answer */
+
+.answers h1{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.answer-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.answer-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.answer-form .form-group {
+    margin-bottom: 15px;
+}
+
+.answer-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.answer-form input[type="text"], 
+.answer-form textarea, 
+.answer-form select {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.answer-form input[type="text"]:focus, 
+.answer-form textarea:focus, 
+.answer-form select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.answer-form button {
+    background: linear-gradient(90deg, #007BFF, #0056b3);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    width: 60%;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+    outline: none;
+}
+
+
+.answer-form button:hover,
+.answer-form button:focus {
+    background: linear-gradient(90deg, #007aff, #4a90e2); 
+    transform: scale(1.05);
+}
+
+.answer-form #addTestCase {
+    background: #e7e7e7;
+    color: #333;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.answer-form #addTestCase:hover {
+    background: #d5d5d5;
+}
+

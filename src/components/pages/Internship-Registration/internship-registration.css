@@ -1,0 +1,250 @@
+.parent-project {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 40px 0;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .required-field::after {
+    content: "*";
+    color: #dc3545;
+    margin-left: 4px;
+  }
+
+  .required-note {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .back-button-css {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e2f107;
+    color: white;
+    border: none;
+    padding: 18px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  .back-button-css:hover {
+    background-color: #cef34a;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .back-button-css[title] {
+    position: relative;
+  }
+  
+  .back-button-css[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e2f107;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    opacity: 1;
+    transition: opacity 0.3s;
+    z-index: 10;
+  }
+  
+  .back-button-css[title]:hover::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    display: none;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: #3498db transparent transparent transparent;
+    z-index: 10;
+  }
+  
+  .back-button-css i {
+    font-size: 18px;
+  }
+
+  .title-section {
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    background: linear-gradient(
+      to right,
+      #a77979,
+      #704f4f,
+      #553939,
+      #472d2d
+    );
+    position: relative;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .title-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .title-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .header-icon {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .title-divider {
+    width: 60px;
+    height: 3px;
+    background: white;
+    margin: 15px auto;
+    opacity: 0.8;
+  }
+
+  .form-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .section-divider {
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+  }
+
+  .section-divider::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: #e0e0e0;
+    z-index: 1;
+  }
+
+  .section-divider span {
+    background: white;
+    padding: 0 15px;
+    color: #1b0e8b;
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
+  }
+
+  .form-label {
+    color: #2c3e50;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .input-group {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+
+  .input-group-text {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-right: none;
+    color: #553939;
+    padding: 12px;
+    width: 45px;
+    justify-content: center;
+  }
+
+  .form-control,
+  .form-select {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .form-control:focus,
+  .form-select:focus {
+    box-shadow: none;
+    border-color: #553939;
+  }
+
+  textarea.form-control {
+    min-height: 120px;
+  }
+
+  .submit-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .btn-submit {
+    background: #553939;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 10px rgba(74, 144, 226, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .btn-submit:hover {
+    background: #553939;
+  }
+  .error-message-internship {
+    color: red;
+  }
+
+  @media (max-width: 768px) {
+    .title-section h1 {
+      font-size: 1.8rem;
+    }
+    .title-section p {
+      font-size: 0.9rem;
+      padding: 0 10px;
+    }
+    .form-container {
+      margin: 20px;
+      padding: 20px;
+    }
+    .back-button {
+      left: 50px;
+    }
+  }
+  @media (max-width: 430px) {
+    .back-button {
+      left: 25px;
+    }
+    @media (max-width: 350px) {
+      .back-button {
+        left: 20px;
+      }
+    }
+  }
